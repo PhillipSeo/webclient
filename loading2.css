@@ -1,0 +1,43 @@
+body {
+    padding: 50px;
+    background-color: #0093FF;
+}
+
+.loading {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+}
+
+.loading div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    height: 80px;
+    margin: auto;
+    background-color: white;
+    animation: loading 1s infinite;
+}
+
+.loading div:nth-child(1) {
+    left: -70px;
+    animation-delay: -0.1s;
+}
+
+.loading div:nth-child(3) {
+    right: -70px;
+    animation-delay: 0.1s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.5);
+    }
+}
